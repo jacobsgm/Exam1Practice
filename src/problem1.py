@@ -215,7 +215,7 @@ def run_test_problem1b():
     print('       actual:  ', answer)
 
     # Test 4:
-    expected = 1.9552  # This is APPROXIMATELY the correct answer.
+    expected = 1  # This is APPROXIMATELY the correct answer.
     answer = problem1b(0, 3)
     print()
     print('Test 4 expected:', expected, '(approximately)')
@@ -257,10 +257,8 @@ def problem1b(m, f):
     n = m*f
     for k in range(n-m+1):
 
-     #   if((k+m) == 2 & (k+m)% 2 == 0):
-     #       count = count+1
-        if((k+m) % 2 == 1 & ()):
-            count = count+1
+     if(is_prime(k+m)== True):
+         count = count +1
 
     return count
 
