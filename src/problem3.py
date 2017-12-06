@@ -262,13 +262,15 @@ def problem3b(m, point1):
     reset = point1.x
     alteredreset = point1.y
     window = rg.RoseWindow(400, 650)
+    sumtotal=0
     for k in range(m):
-        problem3a(window,point1,(2*k+3))
+        x = problem3a(window,point1,(2*k+3))
+        sumtotal = sumtotal + x
         point1.y = alteredreset+(k+1)*60
         point1.x = reset
     window.render()
     window.close_on_mouse_click()
-
+    return sumtotal
 
 
 # ----------------------------------------------------------------------
