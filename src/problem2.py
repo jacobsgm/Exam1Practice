@@ -114,7 +114,24 @@ def problem2a(circle, rectangle, window):
     circle.attach_to(window)
     rectangle.attach_to(window)
 
+    window.render()
+    window.continue_on_mouse_click()
 
+    start = rg.Point(rectangle.get_upper_right_corner().x,
+                      rectangle.get_upper_right_corner().y)
+    end = rg.Point(rectangle.get_lower_left_corner().x,
+                      rectangle.get_lower_left_corner().y)
+    line = rg.Line(start,end)
+    line.arrow = 'last'
+    line.attach_to(window)
+    window.render()
+    window.continue_on_mouse_click()
+
+    circle.fill_color = 'blue'
+    window.render()
+    window.continue_on_mouse_click()
+
+    window.render()
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
