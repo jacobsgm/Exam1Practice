@@ -363,9 +363,12 @@ def problem1c(n):
     #    TIME ESTIMATE:   15 to 20 minutes.
     # ------------------------------------------------------------------
 
-    total = 0
-    for k in range(2,n):
+    total = 1
+    for k in range(n):
         if(is_prime(n-k)== True):
+            total = total*(n-k)
+
+    return sum_of_digits(total)
 
 
 
