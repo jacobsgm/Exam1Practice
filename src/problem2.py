@@ -102,7 +102,7 @@ def problem2a(circle, rectangle, window):
       :type window:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -194,7 +194,7 @@ def problem2b(rect, n, delta, win):
       :type win:    rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -202,6 +202,20 @@ def problem2b(rect, n, delta, win):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 25 minutes.
     # ------------------------------------------------------------------
+
+    rect.attach_to(win)
+    win.render()
+
+    for k in range(n):
+        newPoint1 = rg.Point(rect.get_upper_left_corner().x-(delta*k+1),
+                             rect.get_upper_left_corner().y-(delta*k+1))
+        newPoint2 = rg.Point(rect.get_lower_right_corner().x+(delta*k+1),
+                             rect.get_lower_right_corner().y+(delta*k+1))
+
+        newRect= rg.Rectangle(newPoint1,newPoint2)
+        newRect.attach_to(win)
+        win.render()
+
 
 
 # ----------------------------------------------------------------------
